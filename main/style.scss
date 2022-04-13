@@ -34,7 +34,7 @@ body {
   flex-direction: column;
   & .top {
     display: flex;
-    height: 50vh;
+    height: 35vh;
     width: auto;
     justify-content: space-between;
     margin: 50px;
@@ -80,6 +80,7 @@ body {
 
 .rate {
   width: 45%;
+  height: 35vh;
   display: flex;
   flex-direction: column;
   &__box {
