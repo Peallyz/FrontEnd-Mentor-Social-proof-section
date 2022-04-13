@@ -1,0 +1,158 @@
+//*Variable*//
+$cl_title: hsl(0, 0%, 100%);
+$cl_card: hsl(300, 43%, 22%);
+$cl_txt: hsl(303, 10%, 53%);
+$cl_subtitle: hsl(333, 80%, 67%);
+$cl_txt_card: hsl(300, 24%, 96%);
+
+//*Import*//
+
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap");
+
+//*CSS*//
+
+footer {
+  position: fixed;
+  bottom: 0;
+}
+.attribution {
+  font-size: 15px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+#back {
+  background: url(../../images/bg-pattern-top-desktop.svg) top left no-repeat,
+    url(../../images/bg-pattern-bottom-desktop.svg) bottom right no-repeat;
+}
+
+body {
+  font-family: "League Spartan";
+  display: flex;
+  flex-direction: column;
+  & .top {
+    display: flex;
+    height: 50vh;
+    width: auto;
+    justify-content: space-between;
+    margin: 50px;
+    margin-top: 50px;
+  }
+  & .left__top {
+    width: 400px;
+    min-width: 400px;
+    max-height: 300px;
+    display: flex;
+    flex-direction: column;
+    word-wrap: break-word;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 100px;
+  }
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+  #back {
+    background: url(../../images/bg-pattern-top-mobile.svg) top left no-repeat,
+      url(../../images/bg-pattern-bottom-mobile.svg) bottom right no-repeat;
+  }
+}
+.title {
+  font-size: 60px;
+  margin: 0;
+  font-weight: 700;
+  color: $cl_card;
+}
+
+.subtitle {
+  color: $cl_txt;
+  font-size: 17px;
+  line-height: 25px;
+  font-weight: 500;
+}
+
+.rate {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  &__box {
+    width: 350px;
+    color: $cl_card;
+    font-weight: 700;
+    background: $cl_txt_card;
+    margin: 10px;
+    margin-left: 20px;
+    padding: 15px 60px 15px 40px;
+    border-radius: 10px;
+    &--1 {
+      align-self: flex-start;
+    }
+    &--2 {
+      align-self: center;
+    }
+    &--3 {
+      align-self: flex-end;
+    }
+    @media screen and (max-width: 1200px) {
+      align-self: center;
+    }
+  }
+
+  & img {
+    margin-right: 10px;
+  }
+}
+
+.comment {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  height: 40vh;
+  &__box {
+    background: $cl_card;
+    border-radius: 10px;
+    color: $cl_txt_card;
+    padding: 30px;
+    margin: 10px;
+    width: 300px;
+    &--1 {
+      align-self: flex-start;
+    }
+    &--2 {
+      align-self: center;
+    }
+    &--3 {
+      align-self: flex-end;
+    }
+    & .name {
+      color: $cl_title;
+      font-weight: 500;
+      margin-top: 25px;
+    }
+    & .verif {
+      color: $cl_subtitle;
+      font-weight: 400;
+    }
+    & .txt_comment {
+      clear: both;
+      font-size: 15;
+      line-height: 20px;
+    }
+    & img {
+      border-radius: 50%;
+      float: left;
+      width: 50px;
+      margin: 20px;
+    }
+  }
+}
